@@ -1,0 +1,24 @@
+syntax = "proto3";  
+
+package proto;  
+
+option go_package = "github.com/sashedher/protobufs/proto";  
+
+message User {  
+  // @gotags: valid:"id"
+  string id = 1;  
+  string name = 2;  
+  string email = 3;  
+}  
+
+service UserService {  
+  rpc GetUser(UserIdRequest) returns (User);  
+  rpc CreateUser(User) returns (User);  
+}  
+
+message UserIdRequest {  
+  string id = 1;  
+}
+
+
+// protoc --proto_path=./ --go_out=paths=source_relative:./ --go-grpc_out=paths=source_relative,require_unimplemented_servers=false:./ ./*.proto
