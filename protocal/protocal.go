@@ -1,9 +1,9 @@
-package main
+package protocal
 
 import (
 	"fmt"
 )
 
-func hello_protos() {
+func HelloProtos() {
 	fmt.Println("Hello, Protobufs!")
 }

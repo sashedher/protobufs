@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/sashedher/protobufs/protos"
+	"github.com/sashedher/protobufs/protocal"
 )
 
 func main() {
 	fmt.Println("Hello, World!")
-	protos.HelloProtos()
+	protocal.HelloProtos()
 }
